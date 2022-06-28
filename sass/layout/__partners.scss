@@ -1,0 +1,51 @@
+.partners {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.partners__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    margin-bottom: 50px;
+}
+
+.partners__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners__link {
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    border-color: #afb1b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    transition: 250ms border-color var(--timing-animation);
+
+    &:hover, &:focus {
+        border-color: var(--second-text-color);
+    }
+}
+
+.partners__icon {
+    fill: #afb1b8;
+    transition: 250ms fill var(--timing-animation);
+
+    .partners__link:hover &, .partners__link:focus & {
+            fill: var(--second-text-color);
+        }
+}
+
+
+

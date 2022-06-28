@@ -1,0 +1,52 @@
+.top {
+    background-color: #c4c4c4;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../img/top-back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.top__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+    box-sizing: content-box;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.top__button {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    background-color: var(--second-text-color);
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    transition: width 250ms var(--timing-animation),
+        height 250ms var(--timing-animation);
+
+    &:hover {
+         width: 203px;
+        height: 51px;
+    }
+}
+
