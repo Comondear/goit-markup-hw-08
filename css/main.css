@@ -149,20 +149,18 @@
 }
 
 .features {
-  padding-top: 95px;
+  padding-top: 60px;
 }
 
 .features__list {
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  gap: 30px;
 }
 
 .features__item {
-  width: 270px;
-}
-.features__item:not(:last-child) {
-  margin-right: 30px;
+  max-width: 450px;
 }
 
 .feature-icon-1::before,
@@ -617,7 +615,7 @@
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -1003,6 +1001,8 @@ button {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {

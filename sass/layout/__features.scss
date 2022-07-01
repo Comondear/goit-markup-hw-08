@@ -1,19 +1,22 @@
 .features {
-    padding-top: 95px;
+    padding-top: 60px;
+    
 }
 
 .features__list {
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    gap: 30px;
+
 }
 
 .features__item {
-    width: 270px;
+    max-width: 450px;
 
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
+    // &:not(:last-child) {
+    //     margin-right: 30px;
+    // }
 }
 
 .feature-icon-1::before,
