@@ -13,11 +13,11 @@
 }
 
 .nav__item {
-    max-height: 80px;
+  max-height: 80px;
 
-    &:not(:last-child) {
-            margin-right: 50px;
-        }
+  &:not(:last-child) {
+      margin-right: 50px;
+  }
 }
 
 .nav__link {
@@ -136,7 +136,7 @@
     width: 100%;
 }
 
-.mob .is-hidden {
+.mob.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
@@ -176,7 +176,7 @@
     fill: currentColor;
 
     &:hover {
-            fill: var(--second-text-color);
+        fill: var(--second-text-color);
     }
 
 }
@@ -192,8 +192,8 @@
     padding-bottom: 32px;
 
     &:last-child {
-            padding-bottom: 0;
-}
+        padding-bottom: 0;
+    }
 }
 
 .mob__navlink {
@@ -206,8 +206,8 @@
 
 
     &:hover {
-            fill: var(--second-text-color);
-        }
+        fill: var(--second-text-color);
+    }
 }
 
 .mob__connect {
