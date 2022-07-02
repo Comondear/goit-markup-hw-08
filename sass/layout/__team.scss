@@ -1,38 +1,63 @@
 .team {
     background-color: #f5f4fa;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 60px 0;
+    margin: 0 auto;
+
+    @include desktop {
+        padding: 94px 0;
+    }
 }
 
 .who {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 16px;
 }
 
 .team__title {
-    font-size: 36px;
-    line-height: calc(42 / 36);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: calc(33/28);
+    text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-text-color);
-    box-sizing: content-box;
-    text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include desktop {
+        font-size: 36px;
+        line-height: calc(42 / 36);
+        color: var(--main-text-color);
+        margin-bottom: 50px;
+    }
+
+
 }
 
 .team__list {
     display: flex;
-    align-items: center;
-    margin-left: -30px;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include desktop {
+        flex-wrap: nowrap;
+    }
 }
 
 .team__item {
-    flex-basis: calc(100% / 3 - 30px);
-    margin-left: 30px;
+    max-width: 450px;
     background-color: #fff;
     box-sizing: border-box;
     box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
         0px 1px 3px 0px #0000001f;
     border-radius: 4px;
+
+    @include tablet {
+        width: 354px;
+    }
+
+    @include desktop {
+        width: 270px;
+        margin-left: 30px;
+    }
 }
 
 .who__title {
@@ -57,5 +82,9 @@
 }
 
 .team__soc {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+
+    @include desktop {
+        margin-bottom: 30px;
+    }
 }

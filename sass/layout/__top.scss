@@ -1,35 +1,75 @@
 .top {
     background-color: #c4c4c4;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 118px 0;
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../img/top-back.jpg);
+        url(../img/top-back-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1600px;
+    max-width: 767px;
     margin: 0 auto;
+
+    @include retina {
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../img/top-back-mob-2x.jpg);
+    }
+
+    @include tablet {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../img/top-back-tab.jpg);
+        max-width: 1199px;
+                @include retina {
+                        background-image: linear-gradient(to right,
+                                rgba(47, 48, 58, 0.4),
+                                rgba(47, 48, 58, 0.4)),
+                            url(../img/top-back-tab-2x.jpg);
+                    }
+    }
+
+        @include desktop {
+            background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../img/top-back-des.jpg);
+        max-width: 1600px;
+                        @include retina {
+                                background-image: linear-gradient(to right,
+                                        rgba(47, 48, 58, 0.4),
+                                        rgba(47, 48, 58, 0.4)),
+                                    url(../img/top-back-des-2x.jpg);
+                            }
+        }
+
+
 }
 
 .top__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #ffffff;
     box-sizing: content-box;
     text-align: center;
     margin-bottom: 30px;
+
+    @include desktop {
+            font-size: 44px;
+            line-height: 1.36;
+    }
 }
 
 .top__button {
-    font-family: inherit;
-    font-size: 16px;
     font-weight: 700;
-    line-height: calc(30 / 16);
+    font-size: 16px;
+    line-height: 1.88;
     letter-spacing: 0.06em;
     color: #ffffff;
     background-color: var(--second-text-color);

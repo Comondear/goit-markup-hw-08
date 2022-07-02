@@ -1,6 +1,12 @@
 .wwd {
-    padding-top: 94px;
-    padding-bottom: 94px;
+
+
+    display: none;
+
+    @include desktop {
+        display: block;
+            padding-bottom: 94px;
+    }
 }
 
 .wwd__title {

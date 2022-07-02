@@ -1,3 +1,6 @@
+@import './utils/__mixins';
+@import './utils/_variables';
+
 @import './layout/_header';
 @import './layout/_top';
 @import './layout/_features';
@@ -12,6 +15,3 @@
 @import './components/_soc-list';
 @import './components/_address';
 @import './components/_modal';
-
-@import './utils/__variables.scss';
-@import './utils/__mixins.scss';
