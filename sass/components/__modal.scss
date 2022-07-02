@@ -15,8 +15,9 @@
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -35,6 +36,11 @@
     transform: translate(-50%, -50%) scale(1.2);
     opacity: 0;
     visibility: hidden;
+  }
+
+  @include desktop {
+  width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -79,14 +85,19 @@
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: calc(23 / 20);
+  line-height: calc(30 / 20);
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+
+  @include desktop {
+      line-height: calc(23 / 20);
+  }
 }
 
 .modal-form {
-  width: 448px;
+  width: 100%;
+  // width: 448px;
   margin-top: 12px;
 }
 
@@ -131,7 +142,7 @@
 
 .modal-input-comment {
   box-sizing: border-box;
-  width: 448px;
+  width: 100%;
   height: 120px;
   left: 576px;
   top: 518px;
@@ -166,14 +177,20 @@
 
 .policy {
   font-weight: 400;
-  font-size: 14px;
-  line-height: calc(24 / 14);
+  font-size: 12px;
+  line-height: calc(14/12);
+
   letter-spacing: 0.03em;
   color: #757575;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 
 .check-icon {

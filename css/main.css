@@ -69,6 +69,11 @@ body {
 .nav {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+}
 
 .nav__item {
   max-height: 80px;
@@ -154,13 +159,34 @@ body {
 .connect {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .connect {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect {
+    flex-direction: row;
+    align-items: center;
+  }
+}
 
 .header__connect {
   margin-left: auto;
 }
 
-.connect__tel {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .connect__tel {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect__tel {
+    margin-left: 50px;
+    margin-top: 0;
+  }
 }
 
 .header-open-button {
@@ -170,12 +196,22 @@ body {
   background-color: #ffffff;
   padding: 10px 0;
 }
+@media screen and (min-width: 768px) {
+  .header-open-button {
+    display: none;
+  }
+}
 
 .header-open-icon {
   fill: currentColor;
 }
 .header-open-icon:hover {
   fill: var(--second-text-color);
+}
+@media screen and (min-width: 768px) {
+  .header-open-icon {
+    display: none;
+  }
 }
 
 .mob {
@@ -185,6 +221,8 @@ body {
   background-color: #ffffff;
   height: 796vw;
   width: 100%;
+  opacity: 1;
+  transition: opacity 250ms var(--timing-animation);
 }
 
 .mob.is-hidden {
@@ -207,17 +245,17 @@ body {
   overflow-y: auto;
 }
 
-.mob__button {
+.mob-button {
   position: fixed;
   top: 10px;
   right: 15px;
   padding: 0;
   background-color: transparent;
   border: none;
-  cursor: pointer;
   fill: currentColor;
+  z-index: 1;
 }
-.mob__button:hover {
+.mob-button:hover {
   fill: var(--second-text-color);
 }
 
@@ -722,6 +760,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: baseline;
   }
 }
 
@@ -909,15 +948,45 @@ body {
 }
 
 .gallery {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .gallery-buttons-list {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .gallery-buttons-list {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery-buttons-list {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-buttons-list {
+    margin-bottom: 50px;
+  }
+}
+
+.gallery-buttons-item {
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .gallery-buttons-item {
+    margin-bottom: 0;
+  }
 }
 
 .gallery-buttons-link {
@@ -948,12 +1017,11 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin: -15px;
+  gap: 30px;
 }
 
 .gallery-item {
-  flex-basis: calc(33.3333333333% - 30px);
-  margin: 15px;
+  max-width: 450px;
   position: relative;
 }
 .gallery-item:hover {
@@ -962,6 +1030,16 @@ body {
 .gallery-item img {
   display: block;
   max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .gallery-item {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-item {
+    width: 370px;
+  }
 }
 
 .gallery-thumb {
@@ -1179,8 +1257,8 @@ body {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1197,6 +1275,12 @@ body {
   transform: translate(-50%, -50%) scale(1.2);
   opacity: 0;
   visibility: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .no-scroll {
@@ -1235,14 +1319,19 @@ body {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
+}
 
 .modal-form {
-  width: 448px;
+  width: 100%;
   margin-top: 12px;
 }
 
@@ -1283,7 +1372,7 @@ body {
 
 .modal-input-comment {
   box-sizing: border-box;
-  width: 448px;
+  width: 100%;
   height: 120px;
   left: 576px;
   top: 518px;
@@ -1315,14 +1404,20 @@ body {
 
 .policy {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7142857143;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: #757575;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .policy {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
 }
 
 .check-icon {

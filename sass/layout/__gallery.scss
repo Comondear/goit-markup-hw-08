@@ -1,13 +1,39 @@
 .gallery {
+      padding-top: 60px;
+    padding-bottom: 60px;
+  @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
+}
 }
 
 .gallery-buttons-list {
     display: flex;
     align-items: center;
+
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    @include tablet {
     justify-content: center;
-    margin-bottom: 50px;
+    }
+
+    @include tablet {
+    margin-bottom: 30px;
+    }
+
+        @include desktop {
+          margin-bottom: 50px;
+        }
+
+}
+
+.gallery-buttons-item {
+  margin-bottom: 15px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .gallery-buttons-link {
@@ -34,8 +60,6 @@
     }
 }
 
-
-
 .gallery-buttons-item:not(:last-child) {
     margin-right: 8px;
 }
@@ -44,12 +68,11 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin: -15px;
+    gap: 30px;
 }
 
 .gallery-item {
-    flex-basis: calc(100% / 3 - 30px);
-    margin: 15px;
+    max-width: 450px;
 
     position: relative;
 
@@ -62,6 +85,15 @@
         display: block;
         max-width: 100%;
     }
+
+                @include tablet {
+                  width: 354px;
+                }
+        
+                @include desktop {
+                  width: 370px;
+                
+                }
 }
 
 .gallery-thumb {
