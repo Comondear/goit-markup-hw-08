@@ -88,7 +88,7 @@ body {
   line-height: 1.1428571429;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
-  padding: 32px 0px;
+  padding: 24px 0px;
   position: relative;
   transition: 250ms color var(--timing-animation);
 }
@@ -100,7 +100,7 @@ body {
 .current::after {
   position: absolute;
   content: "";
-  display: block;
+  display: none;
   width: 100%;
   height: 4px;
   left: 0px;
@@ -112,6 +112,16 @@ body {
   animation-timing-function: var(--timing-animation);
   animation-delay: 250ms;
   animation-fill-mode: forwards;
+}
+@media screen and (min-width: 768px) {
+  .current::after {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .current::after {
+    display: block;
+  }
 }
 
 @keyframes grow {
@@ -221,6 +231,7 @@ body {
   background-color: #ffffff;
   height: 796vw;
   width: 100%;
+  z-index: 1;
   opacity: 1;
   transition: opacity 250ms var(--timing-animation);
 }
@@ -253,7 +264,7 @@ body {
   background-color: transparent;
   border: none;
   fill: currentColor;
-  z-index: 1;
+  z-index: 2;
 }
 .mob-button:hover {
   fill: var(--second-text-color);
@@ -337,7 +348,7 @@ body {
 
 .top {
   background-color: #c4c4c4;
-  padding: 118px 0;
+  padding: 200px 0;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/top-back-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -506,6 +517,16 @@ body {
   color: var(--main-text-color);
   margin-bottom: 10px;
 }
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__title {
+    text-align: left;
+  }
+}
 
 .features__text {
   font-weight: 400;
@@ -629,7 +650,6 @@ body {
 @media screen and (min-width: 1200px) {
   .team__item {
     width: 270px;
-    margin-left: 30px;
   }
 }
 
@@ -661,6 +681,9 @@ body {
   .team__soc {
     margin-bottom: 30px;
   }
+}
+.team__soc .soc-list__pic {
+  fill: #AFB1B8;
 }
 
 .partners {
@@ -1021,7 +1044,7 @@ body {
 }
 
 .gallery-item {
-  max-width: 450px;
+  width: 100%;
   position: relative;
 }
 .gallery-item:hover {
@@ -1029,7 +1052,7 @@ body {
 }
 .gallery-item img {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .gallery-item {
@@ -1045,7 +1068,6 @@ body {
 .gallery-thumb {
   position: relative;
   width: 100%;
-  height: 294px;
   overflow: hidden;
 }
 .gallery-thumb::before {
@@ -1068,7 +1090,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
-  padding: 63px 24px;
+  padding: 77px 24px;
   letter-spacing: 0.03em;
   color: #ffffff;
   transform: translateY(100%);
@@ -1076,6 +1098,16 @@ body {
 }
 .gallery-item:hover .gallery-thumb-text {
   transform: translateY(0%);
+}
+@media screen and (min-width: 768px) {
+  .gallery-thumb-text {
+    padding: 49px 24px 77px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-thumb-text {
+    padding: 63px 24px;
+  }
 }
 
 .gallery-text {
@@ -1184,7 +1216,7 @@ body {
 }
 
 .soc-list__pic {
-  fill: #afb1b8;
+  fill: #ffffff;
   transition: 250ms fill var(--timing-animation);
 }
 .soc-list__link:hover .soc-list__pic, .soc-list__link:focus .soc-list__pic {

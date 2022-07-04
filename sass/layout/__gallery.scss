@@ -1,10 +1,10 @@
 .gallery {
       padding-top: 60px;
     padding-bottom: 60px;
-  @include desktop {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+    @include desktop {
+      padding-top: 94px;
+      padding-bottom: 94px;
+  }
 }
 
 .gallery-buttons-list {
@@ -72,7 +72,7 @@
 }
 
 .gallery-item {
-    max-width: 450px;
+    width: 100%;
 
     position: relative;
 
@@ -83,7 +83,7 @@
 
     img {
         display: block;
-        max-width: 100%;
+        width: 100%;
     }
 
                 @include tablet {
@@ -99,7 +99,7 @@
 .gallery-thumb {
     position: relative;
     width: 100%;
-    height: 294px;
+    // height: 294px;
     overflow: hidden;
 
     &::before {
@@ -124,14 +124,23 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.56;
-    padding: 63px 24px;
+    padding: 77px 24px;
     letter-spacing: 0.03em;
     color: #ffffff;
     transform: translateY(100%);
     transition: transform 350ms var(--timing-animation);
 
     .gallery-item:hover & {
-        transform: translateY(0%);
+      transform: translateY(0%);
+    }
+
+    @include tablet {
+      padding: 49px 24px 77px 24px;
+    }
+
+    @include desktop {
+      padding: 63px 24px;
+
     }
 }
 

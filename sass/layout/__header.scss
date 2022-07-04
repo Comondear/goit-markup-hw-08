@@ -30,7 +30,7 @@
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
     color: var(--main-text-color);
-    padding: 32px 0px;
+    padding: 24px 0px;
     position: relative;
     transition: 250ms color var(--timing-animation);
 }
@@ -42,7 +42,7 @@
 .current::after {
     position: absolute;
     content: "";
-    display: block;
+    display: none;
     width: 100%;
     height: 4px;
     left: 0px;
@@ -54,6 +54,14 @@
     animation-timing-function: var(--timing-animation);
     animation-delay: 250ms;
     animation-fill-mode: forwards;
+
+    @include tablet {
+        display: block;
+      }
+    
+      @include desktop {
+        display: block;
+      }
 }
 
 @keyframes grow {
@@ -64,6 +72,7 @@
     to {
         transform: scale(1);
     }
+
 }
 
 .connect__link,
@@ -166,6 +175,7 @@
     background-color: #ffffff;
     height: 796vw;
     width: 100%;
+    z-index: 1;
 
     opacity: 1;
     transition: opacity 250ms var(--timing-animation);
@@ -204,7 +214,7 @@
     background-color: transparent;
     border: none;
     fill: currentColor;
-    z-index: 1;
+    z-index: 2;
 
     &:hover {
         fill: var(--second-text-color);

@@ -90,6 +90,14 @@
 
     color: var(--main-text-color);
     margin-bottom: 10px;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    @include desktop {
+      text-align: left;
+    }
 }
 
 .features__text {
